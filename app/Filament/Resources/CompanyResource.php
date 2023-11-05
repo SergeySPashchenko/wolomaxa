@@ -2,9 +2,12 @@
 
 namespace App\Filament\Resources;
 
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use App\Filament\Resources\CompanyResource\Pages;
 use App\Models\Company;
+use App\Models\User;
 use Filament\Forms\Components\Placeholder;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -29,10 +32,21 @@ class CompanyResource extends Resource
                 ->required(),
 
             TextInput::make('description'),
+            TinyEditor::make('content')
+                ->fileAttachmentsDisk('public')
+                ->fileAttachmentsVisibility('public')
+                ->fileAttachmentsDirectory('uploads')
+                ->profile('default')
+                ->direction('auto') // Set RTL or use ->direction('auto|rtl|ltr')
+                ->columnSpan('full'),
 
             TextInput::make('phone'),
 
             TextInput::make('sendblue_api'),
+
+            Select::make('owner_id')
+                ->options(User::all()->pluck('name', 'id'))
+                ->searchable(),
 
             Placeholder::make('created_at')
                 ->label('Created Date')

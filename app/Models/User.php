@@ -46,4 +46,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function companies()
+    {
+        return $this->belongsToMany(Company::class, 'user_company');
+    }
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'user_company');
+    }
 }

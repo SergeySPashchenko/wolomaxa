@@ -8,7 +8,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('companies', function (Blueprint $table) {
-            $table->ulid('id');
+            $table->ulid('id')->primary();
             $table->string('name');
             $table->string('email');
             $table->text('description')->nullable();
@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->string('sendblue_api')->nullable();
             $table->string('api_token')->nullable();
             $table->ulid('owner_id')->nullable();
+            $table->string('slug')->nullable(); // Field name same as your `saveSlugsTo`
             $table->softDeletes();
             $table->timestamps();
         });

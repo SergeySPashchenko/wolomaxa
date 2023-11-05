@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "amidesfahani/filament-tinyeditor": "^1.0",
         "awcodes/light-switch": "^1.0",
         "filament/filament": "^3.0-stable",
         "guzzlehttp/guzzle": "^7.2",
@@ -19,7 +20,8 @@
         "livewire/livewire": "^3.1",
         "livewire/volt": "^1.4",
         "ralphjsmit/laravel-filament-components": "^2.0",
-        "ralphjsmit/laravel-filament-seo": "^1.2"
+        "ralphjsmit/laravel-filament-seo": "^1.2",
+        "spatie/laravel-sluggable": "^3.5"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
