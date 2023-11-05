@@ -5,7 +5,7 @@ return [
 	'profiles' => [
 		'default' => [
             'plugins' => 'fullpage code preview accordion autoresize codesample directionality advlist link image lists preview pagebreak searchreplace wordcount code fullscreen insertdatetime media table emoticons',
-            'toolbar' => 'preview code undo redo removeformat | styles | bold italic | rtl ltr | alignjustify alignright aligncenter alignleft | numlist bullist outdent indent | forecolor backcolor | blockquote table toc hr | image link media codesample emoticons | wordcount fullscreen fullpage',
+            'toolbar' => 'preview code undo redo removeformat | styles | bold italic | rtl ltr | alignjustify alignright aligncenter alignleft | image | numlist bullist outdent indent | forecolor backcolor | blockquote table toc hr | link media codesample emoticons | wordcount fullscreen fullpage',
             'upload_directory' => null,
         ],
 

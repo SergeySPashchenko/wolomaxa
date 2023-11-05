@@ -10,9 +10,11 @@ use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
 use Filament\Resources\Resource;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Support\Str;
 
 class CompanyResource extends Resource
 {
@@ -31,11 +33,12 @@ class CompanyResource extends Resource
             TextInput::make('email')
                 ->required(),
 
-            TextInput::make('description'),
-            TinyEditor::make('content')
+            TinyEditor::make('description')
                 ->fileAttachmentsDisk('public')
                 ->fileAttachmentsVisibility('public')
-                ->fileAttachmentsDirectory('uploads')
+                ->fileAttachmentsDirectory(function (Get $get): string {
+                    return 'uploads/company/'.Str::slug($get('name')).'/main';
+                })
                 ->profile('default')
                 ->direction('auto') // Set RTL or use ->direction('auto|rtl|ltr')
                 ->columnSpan('full'),
