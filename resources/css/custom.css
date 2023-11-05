@@ -1,0 +1,19 @@
+
+    .fi-hero{
+        @apply flex flex-col justify-center h-80 bg-fixed bg-center bg-cover bg-no-repeat
+    }
+    .fi-hero-h1{
+        @apply ml-24 text-white text-6xl tracking-tight font-serif leading-none
+    }
+    .fi-hero-p-1 {
+        @apply mt-4 mx-24 text-xl text-white font-sans text-opacity-75
+    }
+    .fi-hero-p-2 {
+        @apply mx-24 mt-8
+    }
+    .fi-hero-a {
+        @apply px-4 py-2 border-2 border-white rounded text-white text-lg hover:bg-white hover:text-purple-700
+    }
+    .fi-navbar-login {
+        @apply text-red-600 dark:text-red-400
+    }

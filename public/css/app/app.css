@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .fi-hero{
+        @apply flex flex-col justify-center h-80 bg-fixed bg-center bg-cover bg-no-repeat
+    }
+}
