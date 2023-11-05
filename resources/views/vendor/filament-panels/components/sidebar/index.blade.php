@@ -87,7 +87,7 @@
                 x-data="{}"
                 x-on:click="$store.sidebar.close()"
                 x-show="$store.sidebar.isOpen"
-                class="-mx-1.5 ms-auto hidden lg:flex"
+                class="-mx-1.5 ms-auto lg:flex"
             />
         @endif
     </header>

@@ -40,13 +40,13 @@ class FrontPanelProvider extends PanelProvider
                 'success' => Color::Emerald,
                 'warning' => Color::Orange,
             ])
-            ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
-            ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
+//            ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
+//            ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
                 Pages\Dashboard::class,
             ])
             ->sidebarCollapsibleOnDesktop()
-            ->sidebarFullyCollapsibleOnDesktop()
+//            ->sidebarFullyCollapsibleOnDesktop()
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
 //                Widgets\AccountWidget::class,
@@ -79,7 +79,7 @@ class FrontPanelProvider extends PanelProvider
                 return view('livewire.header.hero');
             }
             )
-            ->renderHook('panels::global-search.before', function (): View|null {
+            ->renderHook('panels::global-search.after', function (): View|null {
                 if (! auth()->user()) {
                     return view('livewire.navbar.links');
                 }

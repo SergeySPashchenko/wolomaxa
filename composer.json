@@ -17,7 +17,9 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.1",
-        "livewire/volt": "^1.4"
+        "livewire/volt": "^1.4",
+        "ralphjsmit/laravel-filament-components": "^2.0",
+        "ralphjsmit/laravel-filament-seo": "^1.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
