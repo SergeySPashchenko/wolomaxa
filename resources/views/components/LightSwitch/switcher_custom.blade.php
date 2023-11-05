@@ -9,7 +9,8 @@
 @if (
     filament()->hasDarkMode() &&
     (! filament()->hasDarkModeForced()) &&
-    $plugin->shouldShowSwitcher()
+    $plugin->shouldShowSwitcher() &&
+    !auth()->user()
 )
     <div @class([
         $tail,
